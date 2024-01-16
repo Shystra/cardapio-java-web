@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.cardapio.food.Food;
+
 import com.example.cardapio.food.FoodRepository;
 import com.example.cardapio.food.FoodResponseDTO;
 
@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("foodJava")
+@RequestMapping("postgres")
 public class FoodController {
     
     @Autowired

@@ -6,10 +6,11 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Table(name = "foodJava")
-@Entity(name = "foodJava")
+@Table(name = "Food")
+@Entity(name = "postgres")
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Food {
     
