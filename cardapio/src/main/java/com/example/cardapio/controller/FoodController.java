@@ -1,6 +1,7 @@
 package com.example.cardapio.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +23,9 @@ public class FoodController {
     @Autowired
     private FoodRepository repository;
     
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    //Criação
     @PostMapping
     public void saveFood(@RequestBody FoodRequestDTO data){
         //Criar um novo cardápio de alimentos no banco de dados
@@ -31,6 +35,9 @@ public class FoodController {
 
     }
 
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    //GET para Consulta de dados
     @GetMapping
     public List<FoodResponseDTO> getAll(){
         List<FoodResponseDTO> foodList = repository.findAll().stream().map(FoodResponseDTO::new).toList();
